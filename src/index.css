@@ -344,7 +344,9 @@ Stripe Styles
   }
 }
 
-/* sidebar */
+/* 
+
+ar */
 .sidebar-wrapper {
   position: fixed;
   top: 0;
@@ -404,6 +406,10 @@ Stripe Styles
   margin-right: 1rem;
 }
 
+.sidebar h5 {
+  margin-top: 1rem;
+}
+
 @media screen and (min-width: 800px) {
   .sidebar-wrapper {
     display: none;
@@ -446,6 +452,7 @@ Stripe Styles
   display: grid;
   gap: 0.25rem 2rem;
 }
+
 .col-2 {
   grid-template-columns: repeat(2, 1fr);
 }
@@ -458,8 +465,12 @@ Stripe Styles
 .submenu h4 {
   margin-bottom: 1.5rem;
 }
+.submenu h5 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
 .submenu-center a {
-  width: 10rem;
+  width: 10rem;  
   display: block;
   color: var(--clr-grey-1);
   text-transform: capitalize;

@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { useGlobalContext } from '../context'
-import {Link } from 'react-router-dom'
+import { OrderByYearLink } from './Functions'
 
 const Submenu = () => {
-  const {isSubmenuOpen, location, page: {page, links}, newTravel, travel} = useGlobalContext();
+  const {isSubmenuOpen, location, page: {page, links}} = useGlobalContext();
   const container = useRef(null);
   const [columns, setColumns] = useState('col-2');
   useEffect(()=>{
@@ -18,13 +18,42 @@ const Submenu = () => {
 
   }, [location, links])
 
+  if (page === "our travels"){
+    return <aside className={`${isSubmenuOpen?'submenu show':'submenu'}`} ref={container}>
+    <h4>{page}</h4>
+    <div>
+    
+    <h5>2023</h5>
+    <div className={`submenu-center ${columns}`}>
+        {
+          OrderByYearLink(2023)
+        }
+      </div>
+    <h5>2022</h5>
+    <div classname={`submenu-center ${columns}`}>
+        {
+          OrderByYearLink(2022)
+        }
+      </div>  
+    <h5>2021</h5>
+    <div className={`submenu-center ${columns}`}>
+        {
+          OrderByYearLink(2021)
+        }
+    </div>
+    </div>
+  </aside>
+  
+  }
+  else{
   return <aside className={`${isSubmenuOpen?'submenu show':'submenu'}`} ref={container}>
     <h4>{page}</h4>
     <div className={`submenu-center ${columns}`}>{links.map((link, index) => {
       const {label, icon, url} = link;
-      return <a key={index} href={`../travels/${url}`}>{icon}{label}</a>
+      return <a key={index} href={`..${url}`}>{icon}{label}</a>
     })}</div>
   </aside>
+  }
 }
 
 export default Submenu
