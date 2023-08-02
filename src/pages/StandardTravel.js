@@ -16,12 +16,27 @@ const OurTravels = () => {
             <p>{travel.intro}</p>
           
 
-        {travel.page.map((item)=>{
+        {travel.page.map((item, index)=>{
           const {title, text, image} = item;
+          if(index % 2 === 0) {
           return <div>
             <h2>{title}</h2>
-            <p>{text}</p>
+            <div className='travel'>
+              <img className="image" src={image} alt={title}/>
+              <p className='text'>{text}</p>
             </div>
+            </div>
+
+          }
+          else{
+          return <div>
+            <h2>{title}</h2>
+            <div className='travel'>
+              <p className='text'>{text}</p>
+              <img className="image" src={image} alt={title}/>
+            </div>
+            </div>  
+          }
           
         })}
 

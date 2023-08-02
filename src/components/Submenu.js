@@ -25,21 +25,15 @@ const Submenu = () => {
     
     <h5>2023</h5>
     <div className={`submenu-center ${columns}`}>
-        {
-          OrderByYearLink(2023)
-        }
+        {OrderByYearLink(2023)}
       </div>
     <h5>2022</h5>
-    <div classname={`submenu-center ${columns}`}>
-        {
-          OrderByYearLink(2022)
-        }
-      </div>  
+    <div className={`submenu-center ${columns}`}>
+        {OrderByYearLink(2022)}
+    </div>
     <h5>2021</h5>
     <div className={`submenu-center ${columns}`}>
-        {
-          OrderByYearLink(2021)
-        }
+        {OrderByYearLink(2021)}
     </div>
     </div>
   </aside>

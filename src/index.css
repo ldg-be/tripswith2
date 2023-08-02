@@ -481,3 +481,19 @@ ar */
   color: var(--clr-grey-5);
   margin-right: 1rem;
 }
+
+
+/* Travel Standard Style */
+.travel {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+}
+.travel img{
+  border-radius: 25px;
+  width: 80%;
+  margin-right: 5%;
+}
+.travel text{
+  margin-right: 5%;
+}

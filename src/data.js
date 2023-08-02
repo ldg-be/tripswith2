@@ -10,9 +10,9 @@ export const travels = [
     url: 'germany21',
     intro:`As a very first trip together, we went by car just across the Belgian border to the Mosel region in Germany`,
     page: [
-      {title:"Bridge",text: "During this hike towards this foot bridge across a valley...", image:""},
-      {title:"Castle",text: "", image:""},
-      {title:"Waterfall",text: "", image:""},
+      {title:"Bridge",text: "During this hike towards this foot bridge across a valley of the Geierlay", image:"https://lh3.googleusercontent.com/pw/AIL4fc-yIcrAkcN4AgeMEipKccY5Y6xIqk1hQO5_BPGdTbLmwXH-JO5pr6-r8t4qRF9sb4ic3sWmF4pfDTX6eCH-Vw1IFRNaL7-M3T8qWOghiRFNveZyiv0AstmbUQXcOe9dTmeHIc86ATaR5tc50EcqEXuKhw=w666-h889-s-no?authuser=0"},
+      {title:"Castle",text: "Having a hike to a castle called Burg Elz ", image:"https://lh3.googleusercontent.com/pw/AIL4fc-mmD0DMkiLLtXKMmYoDjB_3B010xxjQHmTNVhlMzPMWiMGZH8zM5IWwyV0AfaYjBMOZW-E9UiTfOWjunM4Yw9dsbJOBqagk3XUHQ71q0InUdYjeuxQeoOlshH_o4WK5Nz-UTs-W9eXa96cHoW1vIBBmg=w1185-h889-s-no?authuser=0"},
+      {title:"Waterfall",text: "And of course our travel could not end without visiting some waterfalls. These ones were FREEZING!!", image:"https://lh3.googleusercontent.com/pw/AIL4fc_vly2U9up84X1YcpUf73JRIbSdvXAL_WJOzUk3A5JCx7RwySFHE2JJ5mhZ9r5aZvvbKxhnG_ryG7sVWdxspsLTZep4RkZsj065sVN4Cj55dHUPGsAI-_kDPcWkGYjq2JzPhymKLAEqSrUIHLuTNcdCE51U1a8fXeS7m_b0Qcr-DC6owQSWq14UO77wr9YJfz6-NvSdfk1MEQmeMa5jZkdgJxy3YU4Z7R-gDwo7mRndHeCBdnj2RhAk-z_KuMfmRj3OOqtahLrrc8J7l3PoIcmssPbwp03u_-UYrnDC2GqVpztglvY-cZsc02RqfK-eoW-ZidXx6quJLXQwHdzYOsuDMeP1T3ZGL8iUysYI9TshPPuHqbD94ERxZ5pPeb9tzBEbceDWZn2VNgVY263muijviyzbu0I6QU0tmbbDJa1LNFMTJrLokRhuwjmatWVUCSHG0sJVCiD_hydBRE3OKAnIHJ4azGwwq1CtiieMraIPkIvgMZNieimVx3HU6SH3HS0ZJa386X72kgS7hQm7GyO_s1VHk5TmCUy2t8sJ4T9aLgCY9MCgDBVd0zoSWft3A1QPAHZrh6U2xfv0om19oI3mj2VR4pfXI0iDDF21Sl7xg2K-MgBEoetKYpqlGwsoqJ8oI9XmPsDqEFbKq2aFLFOHlnds2ZpfyN7qepsm5gU7EKnecxaLh9AFVbZo_zuD_lh0BaOhGYwFzpSi5jFpi8UIAcUCRtKVMoaD1pdtQm5WuBu3CcRm2YahF1aqsDBgIAtRSuIhoWQ5JOmJ62hSlLqoRrEfmzVfttYyFJ9DtOJv7rPMWsaBt5_4pVngepQWz9rp8qb83x4no1fo7TRETKFdeNA1LqEUGauVsrb68txMFW5H3n-5mGRBU2pfdnsYBOHQY3gVclpQjxlFUATO93sJB_zHG2WX7n16yHGaOJp1izqBpioxpY23r9kaa2iUiw4ztN-QoqInHgH71drWjqT8I5rqqxdhfvib=w1185-h889-s-no?authuser=2"},
     ],
     number: 1,
   },
