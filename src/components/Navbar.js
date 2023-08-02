@@ -6,7 +6,7 @@ import sublinks from '../data'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
-  const {openSidebar, openSubmenu, closeSubmenu, travel} = useGlobalContext();
+  const {openSidebar, openSubmenu, closeSubmenu} = useGlobalContext();
   const displaySubmenu = (e) => {
     const page = e.target.textContent;
     const tempBtn = e.target.getBoundingClientRect();
@@ -28,8 +28,8 @@ const Navbar = () => {
     <button className='btn toggle-btn' onClick={openSidebar}><FaBars/></button>
   </div>
   <ul className='nav-links'>
-    {sublinks.map((item,index) => {
-            const {_, page} = item;
+    {sublinks.map((item) => {
+            const { page} = item;
             return <li>
               <button className='link-btn' onMouseOver={displaySubmenu}>{page}</button>
             </li> 

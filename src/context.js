@@ -1,20 +1,34 @@
-import React, { useState, useContext } from 'react'
-import sublinks, {travels} from './data'
+import React, { useState, useContext, useEffect } from 'react'
+import sublinks from './data'
 
 const AppContext = React.createContext();
 
 export const AppProvider = ({children}) =>{
+    const [data, setData] = useState();
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
     const [loading, setLoading] = useState(true);
     const [location, setLocation] = useState({});
-    const [travel, setTravel] = useState({header:{}, page:[]});
     const [page, setPage] = useState({page:'', links:[]})
 
-    const newTravel = (label) => {
-        const destination = travels.find((dest) => dest.label === label);
-        setTravel(destination);
-    }
+    const url="https://eu-de.functions.appdomain.cloud/api/v1/web/ba16a567-bf8b-4e08-8345-2742a032caf3/travelswith2/get-travels"
+    useEffect(() => {
+        const GetFromDB = async () => {
+            setLoading(true);
+        
+            try{
+              const response = await fetch(`${url}`)
+              const data = await response.json()
+              setData(data)
+        
+            }catch(error){
+                console.log(error);
+            }
+          };
+          GetFromDB();
+          setLoading(false);
+    }, []);
+    
 
     const openSidebar = () => {
         setIsSidebarOpen(true);
@@ -33,7 +47,7 @@ export const AppProvider = ({children}) =>{
         setIsSubmenuOpen(false);
     }
 
-    return <AppContext.Provider value={{isSubmenuOpen, isSidebarOpen, openSubmenu, openSidebar,closeSubmenu, closeSidebar, location, page, loading, travel, newTravel}}>
+    return <AppContext.Provider value={{isSubmenuOpen, isSidebarOpen, openSubmenu, openSidebar,closeSubmenu, closeSidebar, location, page, data}}>
         {children}
     </AppContext.Provider>
 }

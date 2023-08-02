@@ -12,11 +12,12 @@ import Error from './pages/Error'
 import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
 import Submenu from './components/Submenu'
-//import Loading from './components/Loading'
+import Loading from './components/Loading'
 
 function App() {
   return (
     <Router>
+      <Loading/>
       <Navbar/>
       <Sidebar/>
       <Submenu />
