@@ -1,9 +1,11 @@
 import React from 'react'
 import travelImg from '../images/Ourtrail.svg'
 import { useGlobalContext } from '../context'
+import { travels } from '../data'
 
 const About = () => {
     const {closeSubmenu} = useGlobalContext();
+    console.log(JSON.stringify(travels))
     
     return <section className='hero-section' onMouseOver={closeSubmenu}>
       <div className='hero-center'>

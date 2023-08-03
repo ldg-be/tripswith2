@@ -2,16 +2,28 @@ import React from 'react'
 import logo from '../images/trips with 2.svg'
 import { useParams } from 'react-router-dom'
 import { useGlobalContext } from '../context'
-import {travels} from '../data.js'
+import Loading from '../components/Loading'
+import {travels, url} from '../data.js'
 
 const OurTravels = () => {
-  const {closeSubmenu} = useGlobalContext();
+  const {closeSubmenu, searchdata, fetchOneTravel, setSearchdata} = useGlobalContext();
   const {dest} = useParams();
-  const travel = travels.find((item) => item.url === dest)
-      
-  return <section className='hero-section' onMouseOver={closeSubmenu}>
-    <div className='hero-center'>
-      <article className='hero-info'>
+  
+  if (!searchdata) {
+    fetchOneTravel(dest);
+    return <Loading/>;
+  }
+  //const travel = travels.find((item) => item.url === dest)
+
+  
+  else  {
+    const travel = searchdata[0];
+    console.log(travel)
+    if (travel.url != dest){setSearchdata();}
+
+    return <section className='hero-section' onMouseOver={closeSubmenu}>
+      <div className='hero-center'>
+       <article className='hero-info'>
             <h1>{travel.label}</h1>
             <p>{travel.intro}</p>
           
@@ -47,6 +59,6 @@ const OurTravels = () => {
     </div>
   </section>
 }
-
+}
 export default OurTravels
 

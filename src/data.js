@@ -1,6 +1,8 @@
 import {FaBook, FaInstagram, FaYoutube, FaFacebook, FaPlane } from 'react-icons/fa';
 import React from 'react';
 
+export const url="https://eu-de.functions.appdomain.cloud/api/v1/web/ba16a567-bf8b-4e08-8345-2742a032caf3/travelswith2/get-travels"
+
 export const travels = [
   // add year 
   {
