@@ -1,5 +1,4 @@
 import React from 'react'
-import phoneImg from '../images/phone.svg'
 import travelImg from '../images/Ourtrail.svg'
 import { useGlobalContext } from '../context'
 import {Link } from 'react-router-dom'

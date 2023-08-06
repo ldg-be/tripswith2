@@ -1,5 +1,5 @@
 import React from 'react'
-import navbarlogo from '../images/navbarlogo.svg'
+import navbarlogo from '../images/tripswith2circle.svg'
 import { FaBars } from 'react-icons/fa'
 import { useGlobalContext } from '../context'
 import sublinks from '../data'

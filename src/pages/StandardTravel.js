@@ -17,7 +17,7 @@ const OurTravels = () => {
   else  {
     const travel = searchdata[0];
     console.log(travel)
-    if (travel.url != dest){setSearchdata();}
+    if (travel.url !== dest){setSearchdata();}
 
     return <section className='hero-section' onMouseOver={closeSubmenu}>
       <div className='hero-center'>
