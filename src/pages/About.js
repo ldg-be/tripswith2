@@ -1,7 +1,6 @@
 import React from 'react'
 import travelImg from '../images/Ourtrail.svg'
 import { useGlobalContext } from '../context'
-import { travels } from '../data'
 
 const About = () => {
     const {closeSubmenu} = useGlobalContext();  

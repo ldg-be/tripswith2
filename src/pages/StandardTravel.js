@@ -3,7 +3,6 @@ import logo from '../images/trips with 2.svg'
 import { useParams } from 'react-router-dom'
 import { useGlobalContext } from '../context'
 import Loading from '../components/Loading'
-import {travels, url} from '../data.js'
 
 const OurTravels = () => {
   const {closeSubmenu, searchdata, fetchOneTravel, setSearchdata} = useGlobalContext();
@@ -13,7 +12,6 @@ const OurTravels = () => {
     fetchOneTravel(dest);
     return <Loading/>;
   }
-  //const travel = travels.find((item) => item.url === dest)
 
   
   else  {

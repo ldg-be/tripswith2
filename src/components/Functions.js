@@ -6,8 +6,7 @@ import Loading from './Loading.js';
 // functions to use on different components
 
 export const OrderByYearBtn = (year) => {
-  const {loading, data} = useGlobalContext();
-  //const travels = data
+  const {data} = useGlobalContext();
 
   // show loading state while waiting for the data
   if (!data) return <Loading/>;
@@ -21,15 +20,14 @@ export const OrderByYearBtn = (year) => {
   }
 
 export const OrderByYearLink = (year) => {
-  const {loading, data} = useGlobalContext();
-  //const travels = data
+  const {data} = useGlobalContext();
 
   // show loading state while waiting for the data
   if (!data) return <Loading/>;
 
     const thisyear = data.filter((item) => item.year === year)
     return thisyear.map((item, index) =>{
-      const {label, icon, url} = item;
+      const {label, url} = item;
       return <Link key={index} to={`../travels/${url}`}>{<FaPlane />}{label}</Link>
     })
   }
