@@ -7,9 +7,11 @@ const OurTravels = () => {
   const {closeSubmenu} = useGlobalContext();
   return <section className='hero-section' onMouseOver={closeSubmenu}>
     <div className='hero-center'>
-      <article className='hero-info'>
-        <h1>Here you find an overview of our last travels</h1>
+      <article className='ourtravel'>
+        <h1>Our travels</h1>
+        <p>Here you find an overview of our last travels</p>
         <h2>2023</h2>
+        
         {
           OrderByYearBtn(2023)
         }
@@ -21,7 +23,7 @@ const OurTravels = () => {
         {
           OrderByYearBtn(2021)
         }
-
+      
       </article>
       <article className='hero-images'>
         <img src={logo} alt="phone" className='phone-img'/>

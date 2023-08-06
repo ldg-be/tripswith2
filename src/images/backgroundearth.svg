@@ -1,0 +1,30 @@
+<svg width="1500" height="352" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Diagonal Gradient -->
+    <linearGradient id="diagonal-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color: #388E3C; stop-opacity: 1" />
+      <stop offset="100%" style="stop-color: white; stop-opacity: 1" />
+    </linearGradient>
+    
+    <!-- Vertical Gradient -->
+    <linearGradient id="vertical-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color: #689F38; stop-opacity: 1" />
+      <stop offset="100%" style="stop-color: white; stop-opacity: 1" />
+    </linearGradient>
+    
+    <!-- Triangle Mask -->
+    <mask id="triangle-mask">
+      <rect width="100%" height="100%" fill="white" />
+      <polygon points="1500,228 1500,352 0,352" fill="black" />
+    </mask>
+  </defs>
+
+  <!-- Diagonal Gradient Rectangle -->
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#diagonal-gradient)" />
+
+  <!-- Vertical Gradient Rectangle -->
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#vertical-gradient)" />
+
+  <!-- Triangle Mask -->
+  <rect x="0" y="0" width="100%" height="100%" mask="url(#triangle-mask)" fill="black" opacity="0.5" />
+</svg>

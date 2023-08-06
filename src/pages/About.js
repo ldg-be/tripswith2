@@ -4,9 +4,7 @@ import { useGlobalContext } from '../context'
 import { travels } from '../data'
 
 const About = () => {
-    const {closeSubmenu} = useGlobalContext();
-    console.log(JSON.stringify(travels))
-    
+    const {closeSubmenu} = useGlobalContext();  
     return <section className='hero-section' onMouseOver={closeSubmenu}>
       <div className='hero-center'>
         <article className='hero-info'>

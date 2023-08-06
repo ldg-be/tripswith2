@@ -13,10 +13,11 @@ export const OrderByYearBtn = (year) => {
   if (!data) return <Loading/>;
 
     const thisyear = data.filter((item) => item.year === year)
-    return thisyear.map((item) =>{
+    return <div className='ourtravel-grid'>
+    {thisyear.map((item) =>{
       const {url, label} = item;
-      return <p><Link to= {`../travels/${url}`} className='btn' >{label}</Link></p>
-    })
+      return <Link to= {`../travels/${url}`} className='btn ' >{label}</Link>
+    })}</div>
   }
 
 export const OrderByYearLink = (year) => {
